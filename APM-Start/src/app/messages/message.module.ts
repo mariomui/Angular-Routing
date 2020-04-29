@@ -8,12 +8,10 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   imports: [
     SharedModule,
-    RouterModule.forChild([
-      {path: 'messages', component: MessageComponent}
-    ])
+    RouterModule.forChild(
+      [
+        { path: 'messages', component: MessageComponent }]),
   ],
-  declarations: [
-    MessageComponent
-  ]
+  declarations: [MessageComponent],
 })
 export class MessageModule { }
