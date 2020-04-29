@@ -15,19 +15,20 @@ import { ProductModule } from './products/product.module';
 import { UserModule } from './user/user.module';
 import { MessageModule } from './messages/message.module';
 import { RouterModule } from '@angular/router';
+import { ProductListComponent } from './products/product-list.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
     InMemoryWebApiModule.forRoot(ProductData, { delay: 1000 }),
-    RouterModule.forRoot(
-      [
-        {path: 'welcome', component: WelcomeComponent},
-        {path: '', redirectTo: 'welcome', pathMatch: 'full'},
+    RouterModule.forRoot([
+        {path: 'home', component: WelcomeComponent},
+        {path: 'welcome', redirectTo: 'home'}, // all redirects cannot have components
+        {path: 'products', component: ProductListComponent},
+        {path: '', redirectTo: 'home', pathMatch: 'full'},
         {path: '**', component: PageNotFoundComponent}
-      ]
-    ),
+      ]),
     ProductModule,
     UserModule,
     MessageModule
