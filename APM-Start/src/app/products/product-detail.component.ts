@@ -18,6 +18,13 @@ export class ProductDetailComponent implements OnInit {
     private productService: ProductService,
     private activeRoute: ActivatedRoute
   ) {
+
+
+  }
+
+  ngOnInit() {
+    this.setProductDetailViewWithSnapshot();
+
     // using old params
     // this.activeRoute.params
     // .subscribe(this.setProductDetailViewWithOldParams);
@@ -27,11 +34,6 @@ export class ProductDetailComponent implements OnInit {
     // ['example', { foo: ['bar', 'baz'] } ] getall('foo')
     // this.activeRoute.paramMap.subscribe(this.setProductDetailViewWithParamMap);
 
-
-  }
-
-  ngOnInit() {
-    this.setProductDetailViewWithSnapshot();
   }
   // begin activeRoute marsupial functions
   setProductDetailViewWithOldParams = (param) => {
