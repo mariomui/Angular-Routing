@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Product } from './product';
 import { ProductService } from './product.service';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './product-list.component.html',
@@ -26,7 +27,10 @@ export class ProductListComponent implements OnInit {
   filteredProducts: Product[] = [];
   products: Product[] = [];
 
-  constructor(private productService: ProductService) { }
+  constructor(
+    private productService: ProductService,
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe({
@@ -47,5 +51,7 @@ export class ProductListComponent implements OnInit {
   toggleImage(): void {
     this.showImage = !this.showImage;
   }
-
+  public editProduct(event, product) {
+    this.router.navigate(['/products', product.id, 'edit']);
+  }
 }
