@@ -7,15 +7,16 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { ProductData } from './products/product-data';
 
 import { AppComponent } from './app.component';
-import { WelcomeComponent } from './home/welcome.component';
-import { PageNotFoundComponent } from './page-not-found.component';
+// import { WelcomeComponent } from './home/welcome.component';
+// import { PageNotFoundComponent } from './page-not-found.component';
 
 /* Feature Modules */
 import { ProductModule } from './products/product.module';
 import { UserModule } from './user/user.module';
 import { MessageModule } from './messages/message.module';
-import { RouterModule } from '@angular/router';
-import { ProductListComponent } from './products/product-list.component';
+// import { RouterModule } from '@angular/router';
+// import { ProductListComponent } from './products/product-list.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   imports: [
@@ -23,21 +24,22 @@ import { ProductListComponent } from './products/product-list.component';
     HttpClientModule,
     InMemoryWebApiModule.forRoot(ProductData, { delay: 1000 }),
     // explicitly defining the routing module
-    RouterModule.forRoot([
-        {path: 'home', component: WelcomeComponent},
-        {path: 'welcome', redirectTo: 'home'}, // all redirects cannot have components
-        {path: 'products', component: ProductListComponent},
-        {path: '', redirectTo: 'home', pathMatch: 'full'},
-        {path: '**', component: PageNotFoundComponent}
-      ]),
+    // RouterModule.forRoot([
+    //     {path: 'home', component: WelcomeComponent},
+    //     {path: 'welcome', redirectTo: 'home'}, // all redirects cannot have components
+    //     {path: 'products', component: ProductListComponent},
+    //     {path: '', redirectTo: 'home', pathMatch: 'full'},
+    //     {path: '**', component: PageNotFoundComponent}
+    //   ]),
     ProductModule,
     UserModule,
-    MessageModule
+    MessageModule,
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,
-    WelcomeComponent,
-    PageNotFoundComponent
+    // WelcomeComponent,
+    // PageNotFoundComponent
   ],
   bootstrap: [AppComponent]
 })
