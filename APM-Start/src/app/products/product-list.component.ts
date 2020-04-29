@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { Product } from './product';
 import { ProductService } from './product.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   templateUrl: './product-list.component.html',
@@ -29,10 +30,18 @@ export class ProductListComponent implements OnInit {
 
   constructor(
     private productService: ProductService,
-    private router: Router
-    ) { }
+    private router: Router,
+    private activeRoute: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+    this.activeRoute.queryParams.
+      pipe(filter(params => params.filterBy && params.filterBy.length > 0))
+      .subscribe(({ filterBy, showImage }) => {
+        this.listFilter = filterBy;
+        this.showImage = showImage;
+        this.filteredProducts = this.performFilter(this.listFilter);
+      });
     this.productService.getProducts().subscribe({
       next: products => {
         this.products = products;
