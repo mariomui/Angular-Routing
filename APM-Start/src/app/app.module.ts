@@ -22,6 +22,7 @@ import { ProductListComponent } from './products/product-list.component';
     BrowserModule,
     HttpClientModule,
     InMemoryWebApiModule.forRoot(ProductData, { delay: 1000 }),
+    // explicitly defining the routing module
     RouterModule.forRoot([
         {path: 'home', component: WelcomeComponent},
         {path: 'welcome', redirectTo: 'home'}, // all redirects cannot have components
