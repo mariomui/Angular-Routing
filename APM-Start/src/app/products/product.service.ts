@@ -22,7 +22,7 @@ export class ProductService {
       );
   }
 
-  getProduct(id: number): Observable<Product> {
+getProduct(id: number): Observable<Product> {
     if (id === 0) {
       return of(this.initializeProduct());
     }

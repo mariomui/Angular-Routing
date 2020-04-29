@@ -8,9 +8,10 @@
       <a class="nav-link" [routerLink]="['/products']">Products</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/products']">Add Products</a>
+      <a class="nav-link" [routerLink]="['/products', 0, 'edit']"
+        >Add Products</a
+      >
     </li>
-  
   </ul>
   <ul class="navbar-nav ml-auto">
     <li *ngIf="isLoggedIn">

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Product } from './product';
 import { ProductService } from './product.service';
@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './product-detail.component.html',
   styleUrls: ['./product-detail.component.css']
 })
-export class ProductDetailComponent {
+export class ProductDetailComponent implements OnInit {
   pageTitle = 'Product Detail';
   product: Product;
   errorMessage: string;
@@ -18,12 +18,35 @@ export class ProductDetailComponent {
     private productService: ProductService,
     private activeRoute: ActivatedRoute
   ) {
-    this.activeRoute.params.subscribe(param => {
-      this.id = param.id;
-      this.getProduct(this.id);
-    });
+    // using old params
+    // this.activeRoute.params
+    // .subscribe(this.setProductDetailViewWithOldParams);
+
+    // paramsMap provides more convenience
+    /* has(), get(), getall() */
+    // ['example', { foo: ['bar', 'baz'] } ] getall('foo')
+    // this.activeRoute.paramMap.subscribe(this.setProductDetailViewWithParamMap);
+
+
   }
 
+  ngOnInit() {
+    this.setProductDetailViewWithSnapshot();
+  }
+  // begin activeRoute marsupial functions
+  setProductDetailViewWithOldParams = (param) => {
+    this.id = param.id;
+    this.getProduct(this.id);
+  }
+  setProductDetailViewWithParamMap = (param) => {
+    this.getProduct(param.get('id'));
+  }
+
+  setProductDetailViewWithSnapshot = () => {
+    this.id = +this.activeRoute.snapshot.paramMap.get('id');
+    this.getProduct(this.id);
+  }
+  // ======
   getProduct(id: number) {
     this.productService.getProduct(id).subscribe({
       next: product => this.onProductRetrieved(product),
