@@ -1,13 +1,17 @@
 {
   "name": "apm",
-  "version": "0.0.0",
+  "version": "9.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "clog": "auto-changelog",
+    "changelog-debug": "mkdir -p tmp && auto-changelog --template ./config/changelog2.hbs -p --template json --output './tmp/changelog-data.json'",
+    "changelog2": "mkdir -p tmp && auto-changelog --starting-version v1.0.0 --template ./config/changelog2.hbs -p -u --commit-limit false --output ./tmp/change2.md",
+    "version": "git pull && auto-changelog && git add . && git push && git push -u --tags"
   },
   "private": true,
   "dependencies": {
@@ -30,10 +34,11 @@
     "@angular/cli": "~9.0.1",
     "@angular/compiler-cli": "~9.0.0",
     "@angular/language-service": "~9.0.0",
-    "@types/node": "^12.11.1",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
     "angular-in-memory-web-api": "^0.9.0",
+    "auto-changelog": "^2.0.0",
     "codelyzer": "^5.1.2",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
