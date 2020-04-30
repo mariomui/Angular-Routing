@@ -1,13 +1,15 @@
 {
   "name": "apm",
-  "version": "0.0.0",
+  "version": "0.0.4-0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "clog": "auto-changelog",
+    "version": "git pull && auto-changelog && git add . && git push && git push -u --tags"
   },
   "private": true,
   "dependencies": {
