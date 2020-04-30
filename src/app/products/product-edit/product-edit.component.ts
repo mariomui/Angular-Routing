@@ -32,7 +32,7 @@ export class ProductEditComponent implements OnInit {
     // this.errorMessage = error;
     this.activeRoute.data.subscribe(data => {
       const { product, error } = data.resolvedData;
-      this.onProductRetrieved(product || '');
+      this.onProductRetrieved(product);
       this.errorMessage = error;
     });
   }

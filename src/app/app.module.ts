@@ -7,8 +7,8 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { ProductData } from './products/product-data';
 
 import { AppComponent } from './app.component';
-// import { WelcomeComponent } from './home/welcome.component';
-// import { PageNotFoundComponent } from './page-not-found.component';
+import { WelcomeComponent } from './home/welcome.component';
+import { PageNotFoundComponent } from './page-not-found.component';
 
 /* Feature Modules */
 import { ProductModule } from './products/product.module';

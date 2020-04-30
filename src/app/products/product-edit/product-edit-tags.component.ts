@@ -9,7 +9,7 @@ import { Product } from '../product';
 export class ProductEditTagsComponent implements OnInit {
   errorMessage: string;
   newTags = '';
-  product = { id: 1, category: 'test', tags: ['test'] };
+  product = { id: 1, category: 'test', description: '', tags: ['test'] };
 
   constructor(private route: ActivatedRoute) { }
 
