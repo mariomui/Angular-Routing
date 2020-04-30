@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "clog": "auto-changelog",
-    "version": "git pull && auto-changelog && git add . && git push && git push -u --tags"
+    "version": "auto-changelog && git add . && git push && git push -u --tags"
   },
   "private": true,
   "dependencies": {
