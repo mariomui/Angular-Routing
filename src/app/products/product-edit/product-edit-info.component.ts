@@ -11,10 +11,16 @@ export class ProductEditInfoComponent implements OnInit {
   @ViewChild(NgForm, { static: false }) productForm: NgForm;
 
   errorMessage: string;
-  product = { id: 1, productName: 'test', description: '', productCode: 'test' };
+  public product: Product;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private activeRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    // this.product = this.activeRoute.parent.snapshot.data['resolvedData'].product;
+    this.activeRoute.parent.data.subscribe(({ resolvedData }) => {
+      const { product, error } = resolvedData;
+      this.product = product || '';
+      this.errorMessage = error;
+    });
   }
 }
