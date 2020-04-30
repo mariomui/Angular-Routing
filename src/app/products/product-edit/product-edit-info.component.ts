@@ -21,6 +21,11 @@ export class ProductEditInfoComponent implements OnInit {
       const { product, error } = resolvedData;
       this.product = product || '';
       this.errorMessage = error;
+      if (this.productForm) {
+        this.productForm.reset();
+      }
     });
+
+
   }
 }
