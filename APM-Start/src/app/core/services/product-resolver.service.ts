@@ -14,7 +14,7 @@ import { map, catchError } from 'rxjs/operators';
 
 // Set the providedIn property of the @Injectable() to "root".
 // Include the service in the AppModule or in a module that is only imported by the AppModule
-export class ProductResolverService implements Resolve<Product> {
+export class ProductResolverService implements Resolve<ProductResolved> {
   // Resolve is an typescript interface
   // https://angular.io/api/router/Resolve
   // interface Resolve<T> {
