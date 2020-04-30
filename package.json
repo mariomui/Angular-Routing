@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "clog": "auto-changelog",
     "changelog-debug": "mkdir -p tmp && auto-changelog --template ./config/changelog2.hbs -p --template json --output './tmp/changelog-data.json'",
-    "changelog2": "mkdir -p tmp && auto-changelog --starting-version v9.0.0 --template ./config/changelog2.hbs -p -u --commit-limit false --output ./tmp/change2.md",
+    "changelog2": "mkdir -p tmp && auto-changelog --starting-version v2.0.0 --template ./config/changelog2.hbs -p -u --commit-limit false --output ./tmp/change2.md",
     "version": "git pull && auto-changelog && git add . && git push && git push -u --tags"
   },
   "private": true,
