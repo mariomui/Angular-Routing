@@ -36,8 +36,8 @@
     "commitLimit": false,
     "package": true,
     "issueUrl": "",
-    "issuePattern": "[VCE15]+-\\d+",
-    "startingCommit": "f91fcae5972a6c2ffe42ef1d41068e151f5faedc",
+    "issuePattern": "",
+    "startingCommit": "f91fcae",
     "sortCommits": "date-desc",
     "ignoreCommitPattern": "jenkins|jenkinsfile",
     "includeBranch": [
