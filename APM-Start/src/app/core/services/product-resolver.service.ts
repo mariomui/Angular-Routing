@@ -44,7 +44,8 @@ export class ProductResolverService implements Resolve<ProductResolved> {
         map(product => ({ product })),
         catchError(err => {
           const message = `Retrieval error: ${err}`;
-          return of({ product: null, err: message });
+          console.warn(message);
+          return of({ product: null, error: message });
         })
       );
   }
