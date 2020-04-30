@@ -35,13 +35,15 @@ export class ProductListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.activeRoute.queryParams.
-      pipe(filter(params => params.filterBy && params.filterBy.length > 0))
-      .subscribe(({ filterBy, showImage }) => {
-        this.listFilter = filterBy;
-        this.showImage = showImage;
-        this.filteredProducts = this.performFilter(this.listFilter);
-      });
+    // this.activeRoute.queryParams.
+    //   pipe(filter(params => params.filterBy && params.filterBy.length > 0))
+    //   .subscribe(({ filterBy, showImage }) => {
+    //     this.listFilter = filterBy;
+    //     this.showImage = showImage;
+    //     this.filteredProducts = this.performFilter(this.listFilter);
+    //   });
+    this.listFilter = this.activeRoute.snapshot.queryParamMap.get('filterBy') || '';
+    this.showImage = JSON.parse(this.activeRoute.snapshot.queryParamMap.get('showImage'));
     this.productService.getProducts().subscribe({
       next: products => {
         this.products = products;
