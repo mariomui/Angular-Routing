@@ -1,8 +1,8 @@
 [
   {
-    "tag": "v9.0.1",
-    "title": "v9.0.1",
-    "date": "2020-04-30T08:08:18.000Z",
+    "tag": "v9.0.6",
+    "title": "v9.0.6",
+    "date": "2020-04-30T09:24:43.244Z",
     "isoDate": "2020-04-30",
     "niceDate": "30 April 2020",
     "commits": [],
@@ -10,7 +10,173 @@
     "fixes": [],
     "summary": null,
     "major": false,
-    "href": "https://github.com/mariomui/Angular-Routing/compare/v9.0.1...v9.0.1"
+    "href": "https://github.com/mariomui/Angular-Routing/compare/v9.0.6...v9.0.6"
+  },
+  {
+    "tag": "v9.0.6",
+    "title": "v9.0.6",
+    "date": "2020-04-30T09:18:18.000Z",
+    "isoDate": "2020-04-30",
+    "niceDate": "30 April 2020",
+    "commits": [
+      {
+        "hash": "07024bb42c72a7955d379bd55b0bb5d1530aee6e",
+        "shorthash": "07024bb",
+        "author": "mariomui",
+        "email": "yi.kan.mui@gmail.com",
+        "date": "2020-04-30T09:18:04.000Z",
+        "subject": "what",
+        "message": "what",
+        "fixes": null,
+        "href": "https://github.com/mariomui/Angular-Routing/commit/07024bb42c72a7955d379bd55b0bb5d1530aee6e",
+        "breaking": false,
+        "files": 2,
+        "insertions": 4,
+        "deletions": 4,
+        "merge": null
+      }
+    ],
+    "merges": [],
+    "fixes": [],
+    "summary": null,
+    "major": false,
+    "href": "https://github.com/mariomui/Angular-Routing/compare/v9.0.5...v9.0.6"
+  },
+  {
+    "tag": "v9.0.5",
+    "title": "v9.0.5",
+    "date": "2020-04-30T09:16:34.000Z",
+    "isoDate": "2020-04-30",
+    "niceDate": "30 April 2020",
+    "commits": [
+      {
+        "hash": "fad674bff7b3cc6bc79320e65d70a0550329f406",
+        "shorthash": "fad674b",
+        "author": "mariomui",
+        "email": "yi.kan.mui@gmail.com",
+        "date": "2020-04-30T09:16:20.000Z",
+        "subject": "more",
+        "message": "more",
+        "fixes": null,
+        "href": "https://github.com/mariomui/Angular-Routing/commit/fad674bff7b3cc6bc79320e65d70a0550329f406",
+        "breaking": false,
+        "files": 1,
+        "insertions": 1,
+        "deletions": 1,
+        "merge": null
+      }
+    ],
+    "merges": [],
+    "fixes": [],
+    "summary": null,
+    "major": false,
+    "href": "https://github.com/mariomui/Angular-Routing/compare/v9.0.4...v9.0.5"
+  },
+  {
+    "tag": "v9.0.4",
+    "title": "v9.0.4",
+    "date": "2020-04-30T09:15:27.000Z",
+    "isoDate": "2020-04-30",
+    "niceDate": "30 April 2020",
+    "commits": [
+      {
+        "hash": "91a8a98ab12cc2a6e5db5e700321eb59be7c8997",
+        "shorthash": "91a8a98",
+        "author": "mariomui",
+        "email": "yi.kan.mui@gmail.com",
+        "date": "2020-04-30T09:15:11.000Z",
+        "subject": "more",
+        "message": "more",
+        "fixes": null,
+        "href": "https://github.com/mariomui/Angular-Routing/commit/91a8a98ab12cc2a6e5db5e700321eb59be7c8997",
+        "breaking": false,
+        "files": 1,
+        "insertions": 2,
+        "deletions": 2,
+        "merge": null
+      }
+    ],
+    "merges": [],
+    "fixes": [],
+    "summary": null,
+    "major": false,
+    "href": "https://github.com/mariomui/Angular-Routing/compare/v9.0.3...v9.0.4"
+  },
+  {
+    "tag": "v9.0.3",
+    "title": "v9.0.3",
+    "date": "2020-04-30T09:13:16.000Z",
+    "isoDate": "2020-04-30",
+    "niceDate": "30 April 2020",
+    "commits": [
+      {
+        "hash": "f0f64f6a7916bf7e387b506e707d5fb54bdc4087",
+        "shorthash": "f0f64f6",
+        "author": "mariomui",
+        "email": "yi.kan.mui@gmail.com",
+        "date": "2020-04-30T09:12:58.000Z",
+        "subject": "more",
+        "message": "more",
+        "fixes": null,
+        "href": "https://github.com/mariomui/Angular-Routing/commit/f0f64f6a7916bf7e387b506e707d5fb54bdc4087",
+        "breaking": false,
+        "files": 1,
+        "insertions": 2,
+        "deletions": 2,
+        "merge": null
+      },
+      {
+        "hash": "79a088608ebf13d92745422ee981f76865dce217",
+        "shorthash": "79a0886",
+        "author": "mariomui",
+        "email": "yi.kan.mui@gmail.com",
+        "date": "2020-04-30T09:09:59.000Z",
+        "subject": "modify more package.json",
+        "message": "modify more package.json",
+        "fixes": null,
+        "href": "https://github.com/mariomui/Angular-Routing/commit/79a088608ebf13d92745422ee981f76865dce217",
+        "breaking": false,
+        "files": 1,
+        "insertions": 1,
+        "deletions": 1,
+        "merge": null
+      }
+    ],
+    "merges": [],
+    "fixes": [],
+    "summary": null,
+    "major": false,
+    "href": "https://github.com/mariomui/Angular-Routing/compare/v9.0.2...v9.0.3"
+  },
+  {
+    "tag": "v9.0.2",
+    "title": "v9.0.2",
+    "date": "2020-04-30T09:09:22.000Z",
+    "isoDate": "2020-04-30",
+    "niceDate": "30 April 2020",
+    "commits": [
+      {
+        "hash": "4220645ca96bc2b72aa850eba966620267b53d7a",
+        "shorthash": "4220645",
+        "author": "mariomui",
+        "email": "yi.kan.mui@gmail.com",
+        "date": "2020-04-30T09:09:01.000Z",
+        "subject": "more hbs autochangelog modifications",
+        "message": "more hbs autochangelog modifications",
+        "fixes": null,
+        "href": "https://github.com/mariomui/Angular-Routing/commit/4220645ca96bc2b72aa850eba966620267b53d7a",
+        "breaking": false,
+        "files": 5,
+        "insertions": 2088,
+        "deletions": 8,
+        "merge": null
+      }
+    ],
+    "merges": [],
+    "fixes": [],
+    "summary": null,
+    "major": false,
+    "href": "https://github.com/mariomui/Angular-Routing/compare/v9.0.1...v9.0.2"
   },
   {
     "tag": "v9.0.1",
@@ -319,6 +485,22 @@
         "files": 1,
         "insertions": 37,
         "deletions": 3,
+        "merge": null
+      },
+      {
+        "hash": "e07b5e8a3ab5501b2fb6444b53085ccd67bff103",
+        "shorthash": "e07b5e8",
+        "author": "mariomui",
+        "email": "yi.kan.mui@gmail.com",
+        "date": "2020-04-30T00:09:49.000Z",
+        "subject": "Create a product resolver service",
+        "message": "Create a product resolver service\n\nReference Personal Notes\n[Resolver Notes](:note:e4d8cbd4-e575-4f00-858c-f13a987ee815)\nThis resolver is based on intercepting the request for data via the activated\nLink and the component. This service is placed in core because of\nhttps://itnext.io/choosing-a-highly-scalable-folder-structure-in-angular-d987de65ec7\nwhere it explains how to create a scalable directory for angular\n* “Structure the app such that you can locate code quickly”\n*  “Have a near-term view of implementation and a long-term vision.\n* Start small but keep in mind where the app is heading down the road”.\n\nThe SharedModule is where any shared components,\n* pipes/filters\n* services should go.\nThe SharedModule can be imported in any other module when those items will be re-used.\nThe shared module shouldn’t have any dependency to the rest of the application\nand should therefore not rely on any other module.\n\nThe CoreModule takes on the role of the root AppModule ,\nbut is not the module which gets bootstrapped by Angular at run-time.\nThe CoreModule should contain singleton services (which is usually the case),\nuniversal components and other features where there’s only once instance\n per application. To prevent re-importing the core module elsewhere,\n you should also add a guard for it in the core module’ constructor.\n\n This resolver is a singleton service as will a majority of the services\n you choose.",
+        "fixes": null,
+        "href": "https://github.com/mariomui/Angular-Routing/commit/e07b5e8a3ab5501b2fb6444b53085ccd67bff103",
+        "breaking": false,
+        "files": 2,
+        "insertions": 25,
+        "deletions": 0,
         "merge": null
       },
       {
@@ -1843,39 +2025,7 @@
       }
     ],
     "merges": [],
-    "fixes": [
-      {
-        "fixes": [
-          {
-            "id": "5-4",
-            "href": "https://github.com/mariomui/Angular-Routing/issues/5-4",
-            "author": "mariomui"
-          }
-        ],
-        "commit": {
-          "hash": "e07b5e8a3ab5501b2fb6444b53085ccd67bff103",
-          "shorthash": "e07b5e8",
-          "author": "mariomui",
-          "email": "yi.kan.mui@gmail.com",
-          "date": "2020-04-30T00:09:49.000Z",
-          "subject": "Create a product resolver service",
-          "message": "Create a product resolver service\n\nReference Personal Notes\n[Resolver Notes](:note:e4d8cbd4-e575-4f00-858c-f13a987ee815)\nThis resolver is based on intercepting the request for data via the activated\nLink and the component. This service is placed in core because of\nhttps://itnext.io/choosing-a-highly-scalable-folder-structure-in-angular-d987de65ec7\nwhere it explains how to create a scalable directory for angular\n* “Structure the app such that you can locate code quickly”\n*  “Have a near-term view of implementation and a long-term vision.\n* Start small but keep in mind where the app is heading down the road”.\n\nThe SharedModule is where any shared components,\n* pipes/filters\n* services should go.\nThe SharedModule can be imported in any other module when those items will be re-used.\nThe shared module shouldn’t have any dependency to the rest of the application\nand should therefore not rely on any other module.\n\nThe CoreModule takes on the role of the root AppModule ,\nbut is not the module which gets bootstrapped by Angular at run-time.\nThe CoreModule should contain singleton services (which is usually the case),\nuniversal components and other features where there’s only once instance\n per application. To prevent re-importing the core module elsewhere,\n you should also add a guard for it in the core module’ constructor.\n\n This resolver is a singleton service as will a majority of the services\n you choose.",
-          "fixes": [
-            {
-              "id": "5-4",
-              "href": "https://github.com/mariomui/Angular-Routing/issues/5-4",
-              "author": "mariomui"
-            }
-          ],
-          "href": "https://github.com/mariomui/Angular-Routing/commit/e07b5e8a3ab5501b2fb6444b53085ccd67bff103",
-          "breaking": false,
-          "files": 2,
-          "insertions": 25,
-          "deletions": 0,
-          "merge": null
-        }
-      }
-    ],
+    "fixes": [],
     "summary": null,
     "major": false,
     "href": null
