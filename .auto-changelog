@@ -1,0 +1,17 @@
+{
+    "output": "CHANGELOG.md",
+    "template": "config/changelog.hbs",
+    "unreleased": true,
+    "commitLimit": false,
+    "package": true,
+    "issueUrl": "",
+    "issuePattern": "",
+    "startingVersion": "v1.0.0",
+    "sortCommits": "date-desc",
+    "ignoreCommitPattern": "jenkins|jenkinsfile",
+    "includeBranch": [
+      "master",
+      "production"
+    ],
+    "releaseSummary": true
+}
