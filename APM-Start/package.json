@@ -1,6 +1,6 @@
 {
   "name": "apm",
-  "version": "4.0.1",
+  "version": "5.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
@@ -26,6 +26,23 @@
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
+  },
+  "auto-changelog": {
+    "output": "CHANGELOG.md",
+    "template": "config/changelog.hbs",
+    "unreleased": true,
+    "commitLimit": false,
+    "package": true,
+    "issueUrl": "",
+    "issuePattern": "[VCE15]+-\\d+",
+    "startingCommit": "f91fcae5972a6c2ffe42ef1d41068e151f5faedc",
+    "sortCommits": "date-desc",
+    "ignoreCommitPattern": "jenkins|jenkinsfile",
+    "includeBranch": [
+      "master",
+      "production"
+    ],
+    "releaseSummary": true
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.900.1",
