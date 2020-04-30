@@ -11,7 +11,7 @@
     "clog": "auto-changelog",
     "changelog-debug": "mkdir -p tmp && auto-changelog --template ./config/changelog2.hbs -p --template json --output './tmp/changelog-data.json'",
     "changelog2": "mkdir -p tmp && auto-changelog --template ./config/changelog2.hbs -p -u --commit-limit false -o ./tmp/change2.md",
-    "version": "auto-changelog && git add . && git push && git push -u --tags"
+    "version": "git pull && auto-changelog && git add . && git push && git push -u --tags"
   },
   "private": true,
   "dependencies": {
