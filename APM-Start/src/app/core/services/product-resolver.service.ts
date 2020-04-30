@@ -1,8 +1,9 @@
-import { Injectable, ɵCompiler_compileModuleSync__POST_R3__ } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-import { Product } from 'src/app/products/product';
-import { Observable } from 'rxjs';
+import { Product, ProductResolved } from 'src/app/products/product';
+import { Observable, of } from 'rxjs';
 import { ProductService } from 'src/app/products/product.service';
+import { map, catchError } from 'rxjs/operators';
 
 
 @Injectable({
@@ -26,18 +27,25 @@ export class ProductResolverService implements Resolve<Product> {
 
   // these two snapshots imported from router arent objects to be sued, they are interfaces and only describes the route and the state.
   /**
-   * 
+   *
    * @param route Activated Route snapshot is the current activatedRoute
    * @param state // TODO Explain what a Router StateSnapshot is.
    */
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Product> {
-    const id = + route.paramMap.get('id');
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<ProductResolved> {
+    const id = route.paramMap.get('id');
     // resolve must called during some kind of routing process.
     if (isNaN(+id)) {
       const message = `Product id was not a number: ${id}`;
       console.error(message);
       return;
     }
-    return null;
+    return this.productService.getProduct(+id)
+      .pipe(
+        map(product => ({ product })),
+        catchError(err => {
+          const message = `Retrieval error: ${err}`;
+          return of({ product: null, err: message });
+        })
+      );
   }
 }
