@@ -37,8 +37,8 @@
     "package": true,
     "issueUrl": "",
     "issuePattern": "",
-    "startingCommit": "f91fcae",
-    "sortCommits": "date-desc",
+    "startingCommit": "30289b9ee9dd7e89d9cde999c00d88eae161583f",
+    "sortCommits": "date-asc",
     "ignoreCommitPattern": "jenkins|jenkinsfile",
     "includeBranch": [
       "master",
