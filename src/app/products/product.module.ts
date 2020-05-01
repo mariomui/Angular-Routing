@@ -19,9 +19,9 @@ import { NgForm } from '@angular/forms';
       {
         path: 'products', component: ProductListComponent,
         children: [
-          { path: 'products/:id', component: ProductDetailComponent, resolve: { resolvedData: ProductResolverService } },
+          { path: ':id', component: ProductDetailComponent, resolve: { resolvedData: ProductResolverService } },
           {
-            path: 'products/:id/edit', component: ProductEditComponent, resolve: { resolvedData: ProductResolverService },
+            path: ':id/edit', component: ProductEditComponent, resolve: { resolvedData: ProductResolverService },
             children: [
               { path: '', redirectTo: 'info', pathMatch: 'full' }, // top down look
               { path: 'info', component: ProductEditInfoComponent }, // info
