@@ -16,16 +16,21 @@ import { NgForm } from '@angular/forms';
   imports: [
     SharedModule,
     RouterModule.forChild([
-      { path: 'products', component: ProductListComponent },
-      { path: 'products/:id', component: ProductDetailComponent, resolve: { resolvedData: ProductResolverService } },
       {
-        path: 'products/:id/edit', component: ProductEditComponent, resolve: { resolvedData: ProductResolverService },
+        path: 'products', component: ProductListComponent,
         children: [
-          { path: '', redirectTo: 'info', pathMatch: 'full' }, // top down look
-          { path: 'info', component: ProductEditInfoComponent }, // info
-          { path: 'tags', component: ProductEditTagsComponent }, // something else
+          { path: 'products/:id', component: ProductDetailComponent, resolve: { resolvedData: ProductResolverService } },
+          {
+            path: 'products/:id/edit', component: ProductEditComponent, resolve: { resolvedData: ProductResolverService },
+            children: [
+              { path: '', redirectTo: 'info', pathMatch: 'full' }, // top down look
+              { path: 'info', component: ProductEditInfoComponent }, // info
+              { path: 'tags', component: ProductEditTagsComponent }, // something else
+            ]
+          },
         ]
       },
+
     ])
   ],
   declarations: [
