@@ -5,10 +5,12 @@
 
   <div class="card-body" *ngIf="product">
     <div class="wizard">
-      <a [routerLink]="['/products', product.id, 'edit', 'info']"
+      <a
+        [routerLink]="['/products', product.id, 'edit', 'info']"
+        routerLinkActive="active"
         >Basic Information</a
       >
-      <a [routerLink]="['tags']">Search Tags</a>
+      <a routerLinkActive="active" [routerLink]="['tags']">Search Tags</a>
     </div>
     <router-outlet></router-outlet>
     <div>

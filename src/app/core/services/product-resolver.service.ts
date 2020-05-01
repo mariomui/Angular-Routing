@@ -33,6 +33,7 @@ export class ProductResolverService implements Resolve<ProductResolved> {
    */
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<ProductResolved> {
     const id = route.paramMap.get('id');
+
     // resolve must called during some kind of routing process.
     if (isNaN(+id)) {
       const message = `Product id was not a number: ${id}`;

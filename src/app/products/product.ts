@@ -1,5 +1,5 @@
 /* Defines the product entity */
-export interface Product {
+export class Product {
   id: number;
   productName: string;
   productCode: string;
@@ -10,9 +10,27 @@ export interface Product {
   description: string;
   starRating: number;
   imageUrl: string;
+
+  constructor() {
+    Object.assign(this, {
+      id: 0,
+      productName: 'string',
+      productCode: 'string',
+      category: 'string',
+      tags: [],
+      releaseDate: 'string',
+      price: 0,
+      description: 'string',
+      starRating: 0,
+      imageUrl: 'string'
+    });
+  };
 }
 
-export interface ProductResolved {
+export class ProductResolved {
   product: Product;
   error?: any;
+  constructor() {
+    this.product = new Product();
+  }
 }

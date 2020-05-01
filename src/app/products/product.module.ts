@@ -11,14 +11,16 @@ import { ProductResolverService } from '../core/services/product-resolver.servic
 import { ProductEditInfoComponent } from './product-edit/product-edit-info.component';
 import { ProductEditTagsComponent } from './product-edit/product-edit-tags.component';
 import { NgForm } from '@angular/forms';
+import { ProductListResolverService } from '../core/services/product-list-resolver.service';
 
 @NgModule({
   imports: [
     SharedModule,
     RouterModule.forChild([
       {
-        path: 'products', component: ProductListComponent,
+        path: 'products',
         children: [
+          { path: '', component: ProductListComponent, resolve: { resolvedData: ProductListResolverService } },
           { path: ':id', component: ProductDetailComponent, resolve: { resolvedData: ProductResolverService } },
           {
             path: ':id/edit', component: ProductEditComponent, resolve: { resolvedData: ProductResolverService },
